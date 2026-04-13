@@ -23,13 +23,13 @@ pipeline {
         
         stage('Identity') {
             steps {
-                echo "Student: [Insert Your Name] | Roll No: 2022BCS0088"
+                echo "Student: Shashank Upadhyay | Roll No: 2022BCS0088"
             }
         }
         
         stage('Archive') {
             steps {
-                archiveArtifacts artifacts: 'model.pkl, metrics.json', allowEmptyArchive: false
+                archiveArtifacts artifacts: 'output/model.pkl, output/results.json', allowEmptyArchive: false
             }
         }
     }
